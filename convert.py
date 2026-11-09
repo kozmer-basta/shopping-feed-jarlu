@@ -19,6 +19,7 @@ import re
 import sys
 import urllib.request
 import xml.etree.ElementTree as ET
+from collections import Counter
 from datetime import datetime, timezone
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -128,10 +129,18 @@ def https_url(u):
 
 # ---------- parsing ----------
 
+STATS = {"root": None, "tags": Counter()}
+
+
 def iter_items(source):
     """Yields dict(tag -> list of values) for every <item> / <entry>."""
-    for _event, elem in ET.iterparse(source, events=("end",)):
+    for event, elem in ET.iterparse(source, events=("start", "end")):
         name = local(elem.tag)
+        if event == "start":
+            STATS["tags"][name] += 1
+            if STATS["root"] is None:
+                STATS["root"] = name
+            continue
         if name not in ("item", "entry"):
             continue
         data = {}
@@ -328,6 +337,19 @@ def main():
         seen.add(row["item_id"])
         rows.append(row)
 
+    root_tag, tag_counts = STATS["root"], STATS["tags"]
+    # Diagnostics first, so the log always explains what happened.
+    print(f"Zdroj: {total} produktov | platné: {len(rows)} | vylúčené pravidlami: {excluded}")
+    if total == 0:
+        print(f"  V XML sa nenašli žiadne <item>/<entry>. Koreňový element: <{root_tag}>, "
+              f"najčastejšie elementy: {', '.join(f'{t} ({n}x)' for t, n in tag_counts.most_common(8))}")
+    if items:
+        print("  Polia prvého produktu: " + ", ".join(
+            f"{k}={(v[0] if v and isinstance(v[0], str) else v)!s:.40}" for k, v in items[0].items()))
+    reasons = Counter(re.sub(r"'.*?'", "'…'", p["msg"]) for p in problems)
+    for msg, n in reasons.most_common(10):
+        print(f"  {n}x {msg}")
+
     # Safety: never replace a good feed with an empty / broken one.
     min_items = cfg.get("min_items", 1)
     if len(rows) < min_items:
@@ -362,10 +384,7 @@ def main():
     with open(os.path.join(args.out, "report.json"), "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
 
-    print(f"Zdroj: {total} | exportované: {len(rows)} | vylúčené pravidlami: {excluded} | "
-          f"odmietnuté: {len(errors)} | varovania: {len(warnings)}")
-    for p in errors[:20]:
-        print(f"  [chyba] {p['item_id']}: {p['msg']}")
+    print(f"Hotovo: exportované {len(rows)} | odmietnuté {len(errors)} | varovania {len(warnings)}")
 
 
 if __name__ == "__main__":
