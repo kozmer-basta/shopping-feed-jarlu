@@ -1,0 +1,21 @@
+{
+  "feed_url": "https://www.topanocky.eu/index.php?option=com_productxport&view=server&code=google&tmpl=component",
+  "output_file": "openai_feed.csv",
+
+  "seller_name": "Topánočky.eu",
+  "seller_url": "https://www.topanocky.eu",
+  "return_policy_url": "",
+  "default_brand": "",
+  "default_currency": "EUR",
+
+  "ads_eligible": true,
+  "exclude_out_of_stock": true,
+  "exclude": [],
+  "custom_labels_to_ads_metadata": false,
+
+  "target_countries": [],
+  "store_country": "",
+
+  "min_items": 1,
+  "max_drop_ratio": 0.5
+}
