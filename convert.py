@@ -182,7 +182,7 @@ def apply_rules(row, raw, cfg):
 
 def convert_item(raw, cfg, problems):
     default_cur = cfg.get("default_currency", "EUR")
-    item_id = first(raw, "id")
+    item_id = first(raw, "id", "item_id", "sku")
     pid = item_id or "(bez id)"
 
     def problem(level, msg):
