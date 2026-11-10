@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-10T07:25:27+00:00",
-  "source_items": 7281,
-  "exported": 6975,
+  "generated_at": "2026-11-10T13:17:38+00:00",
+  "source_items": 7262,
+  "exported": 6954,
   "excluded_by_rules": 0,
-  "rejected": 306,
+  "rejected": 308,
   "warnings": 9,
   "problems": [
     {
@@ -203,11 +203,6 @@
     },
     {
       "item_id": "19076",
-      "level": "error",
-      "msg": "chýba povinné pole: brand → produkt vynechaný"
-    },
-    {
-      "item_id": "19025",
       "level": "error",
       "msg": "chýba povinné pole: brand → produkt vynechaný"
     },
@@ -547,6 +542,11 @@
       "msg": "chýba povinné pole: brand → produkt vynechaný"
     },
     {
+      "item_id": "8070",
+      "level": "error",
+      "msg": "chýba povinné pole: brand → produkt vynechaný"
+    },
+    {
       "item_id": "8071",
       "level": "error",
       "msg": "chýba povinné pole: brand → produkt vynechaný"
@@ -647,6 +647,11 @@
       "msg": "chýba povinné pole: brand → produkt vynechaný"
     },
     {
+      "item_id": "7957",
+      "level": "error",
+      "msg": "chýba povinné pole: brand → produkt vynechaný"
+    },
+    {
       "item_id": "7964",
       "level": "error",
       "msg": "chýba povinné pole: brand → produkt vynechaný"
@@ -703,11 +708,6 @@
     },
     {
       "item_id": "41371",
-      "level": "error",
-      "msg": "chýba povinné pole: brand → produkt vynechaný"
-    },
-    {
-      "item_id": "41372",
       "level": "error",
       "msg": "chýba povinné pole: brand → produkt vynechaný"
     },
@@ -957,6 +957,11 @@
       "msg": "chýba povinné pole: brand → produkt vynechaný"
     },
     {
+      "item_id": "20122",
+      "level": "error",
+      "msg": "chýba povinné pole: brand → produkt vynechaný"
+    },
+    {
       "item_id": "20112",
       "level": "error",
       "msg": "chýba povinné pole: brand → produkt vynechaný"
@@ -1092,11 +1097,6 @@
       "msg": "chýba povinné pole: brand → produkt vynechaný"
     },
     {
-      "item_id": "19179",
-      "level": "error",
-      "msg": "chýba povinné pole: brand → produkt vynechaný"
-    },
-    {
       "item_id": "19180",
       "level": "error",
       "msg": "chýba povinné pole: brand → produkt vynechaný"
@@ -1132,6 +1132,11 @@
       "msg": "chýba povinné pole: brand → produkt vynechaný"
     },
     {
+      "item_id": "19121",
+      "level": "error",
+      "msg": "chýba povinné pole: brand → produkt vynechaný"
+    },
+    {
       "item_id": "19119",
       "level": "error",
       "msg": "chýba povinné pole: brand → produkt vynechaný"
@@ -1163,6 +1168,11 @@
     },
     {
       "item_id": "19147",
+      "level": "error",
+      "msg": "chýba povinné pole: brand → produkt vynechaný"
+    },
+    {
+      "item_id": "19118",
       "level": "error",
       "msg": "chýba povinné pole: brand → produkt vynechaný"
     },
