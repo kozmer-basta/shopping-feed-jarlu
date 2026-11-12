@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-12T13:27:17+00:00",
-  "source_items": 7257,
-  "exported": 6955,
+  "generated_at": "2026-11-12T19:10:22+00:00",
+  "source_items": 7286,
+  "exported": 6982,
   "excluded_by_rules": 0,
-  "rejected": 302,
+  "rejected": 304,
   "warnings": 5,
   "problems": [
     {
@@ -12,7 +12,22 @@
       "msg": "chýba povinné pole: brand → produkt vynechaný"
     },
     {
-      "item_id": "34114",
+      "item_id": "34112",
+      "level": "error",
+      "msg": "chýba povinné pole: brand → produkt vynechaný"
+    },
+    {
+      "item_id": "34113",
+      "level": "error",
+      "msg": "chýba povinné pole: brand → produkt vynechaný"
+    },
+    {
+      "item_id": "34115",
+      "level": "error",
+      "msg": "chýba povinné pole: brand → produkt vynechaný"
+    },
+    {
+      "item_id": "34116",
       "level": "error",
       "msg": "chýba povinné pole: brand → produkt vynechaný"
     },
@@ -1363,11 +1378,6 @@
     },
     {
       "item_id": "22079",
-      "level": "error",
-      "msg": "chýba povinné pole: brand → produkt vynechaný"
-    },
-    {
-      "item_id": "22105",
       "level": "error",
       "msg": "chýba povinné pole: brand → produkt vynechaný"
     },
