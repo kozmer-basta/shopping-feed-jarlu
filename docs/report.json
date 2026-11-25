@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-25T01:31:59+00:00",
-  "source_items": 6546,
-  "exported": 6246,
+  "generated_at": "2026-11-25T07:39:38+00:00",
+  "source_items": 6488,
+  "exported": 6189,
   "excluded_by_rules": 0,
-  "rejected": 300,
+  "rejected": 299,
   "warnings": 2,
   "problems": [
     {
@@ -403,11 +403,6 @@
     },
     {
       "item_id": "8076",
-      "level": "error",
-      "msg": "chýba povinné pole: brand → produkt vynechaný"
-    },
-    {
-      "item_id": "8075",
       "level": "error",
       "msg": "chýba povinné pole: brand → produkt vynechaný"
     },
